@@ -4,11 +4,11 @@
 #install.packages("randomForest")
 require(randomForest)
 require(dplyr)
-setwd("E:/Laxmi_Rnd/My Laptop/Work/Scoring_algo/Raw dumps for scoring training/channel_views_last_30_day")
+setwd("Scoring_algo/Raw dumps for scoring training/channel_views_last_30_day")
 #########################
 # Preparing test data
 #########################
-data2<-read.table("E:\\Laxmi_Rnd\\My Laptop\\Work\\Scoring_algo\\consolidated.csv", header=T, stringsAsFactors = F, sep = ",")
+data2<-read.table("Scoring_algo\\consolidated.csv", header=T, stringsAsFactors = F, sep = ",")
 head(data2)
 dataa3_3<-data2[data2$last_30_views==0,]
 
@@ -51,7 +51,7 @@ if (nrow(tempp1)>0)
   ##########################
   #importing training data
   #########################
-  overall_data<-read.csv("E:\\Laxmi_Rnd\\My Laptop\\Work\\Scoring_algo\\Raw dumps for scoring training\\channel_views_last_30_day\\New_training_data_full.csv",header = T, stringsAsFactors = F)
+  overall_data<-read.csv("Scoring_algo\\Raw dumps for scoring training\\channel_views_last_30_day\\New_training_data_full.csv",header = T, stringsAsFactors = F)
   head(overall_data)
   overall_data<-overall_data[overall_data$last_30_views>0,]
   overall_data1<-overall_data[c(2:10)]
@@ -223,7 +223,7 @@ print(c("test is prepared",nrow(test) ))
 ##########################
 #importing training data
 #########################
-overall_data<-read.csv("E:\\Laxmi_Rnd\\My Laptop\\Work\\Scoring_algo\\Raw dumps for scoring training\\channel_views_last_30_day\\New_training_data_full W 30_eng.csv",header = T, stringsAsFactors = F)
+overall_data<-read.csv("Scoring_algo\\Raw dumps for scoring training\\channel_views_last_30_day\\New_training_data_full W 30_eng.csv",header = T, stringsAsFactors = F)
 head(overall_data)
 overall_data<-overall_data[overall_data$last_30_views>0,]
 overall_data1<-overall_data[c(2:11)]
