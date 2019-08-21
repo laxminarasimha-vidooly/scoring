@@ -312,7 +312,8 @@ data13$last_30_views<-zz
 data13$last_30_eng<-yy
 
 ################################################
-
+#Train test split
+################################################                    
 smp_size <- floor(0.80 * nrow(data13))
 RMSE = function(m, o){
   sqrt(mean((m - o)^2))
