@@ -1,5 +1,6 @@
 ###########################
-#Last_30_views_prediction
+#Last_30_views_prediction 
+#Predicting without Last_30_eng
 ##########################
 #install.packages("randomForest")
 require(randomForest)
