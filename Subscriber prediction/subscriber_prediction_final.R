@@ -3,9 +3,11 @@
 ##########################
 require(randomForest)
 require(dplyr)
-setwd("E:/Laxmi_Rnd/My Laptop/Work/Scoring_algo/Raw dumps for scoring training/Subscriber prediction")
+
 ##########################
-data2<-read.table("E:\\Laxmi_Rnd\\My Laptop\\Work\\Scoring_algo\\consolidated.csv", header=T, stringsAsFactors = F, sep = ",")
+#data importing and processing
+##########################
+data2<-read.table("Scoring_algo\\consolidated.csv", header=T, stringsAsFactors = F, sep = ",")
 head(data2)
 dataa3_2<-data2[data2$subscriber_lifetime==0,]
 
@@ -27,7 +29,7 @@ test$category<-as.factor(test$category)
 test$view_range<-as.factor(test$view_range)
 test$upload_range<-as.factor(test$upload_range)
 
-overall_data<-read.csv("E:\\Laxmi_Rnd\\My Laptop\\Work\\Scoring_algo\\Raw dumps for scoring training\\Subscriber prediction\\New_training_data.csv",header = T, stringsAsFactors = F)
+overall_data<-read.csv("Scoring_algo\\Raw dumps for scoring training\\Subscriber prediction\\New_training_data.csv",header = T, stringsAsFactors = F)
 
 overall_data1<-overall_data[c(2:8)]
 
@@ -88,7 +90,8 @@ data13$subscriber_lifetime<-y
 data13$views_lifetime<-x
 data13$life_uploads<-z
 ################################################
-
+#Train test split##
+################################################
 smp_size <- floor(0.80 * nrow(data13))
 RMSE = function(m, o){
   sqrt(mean((m - o)^2))
@@ -121,7 +124,9 @@ levels(test$category)<-levels(train$category)
 levels(test$view_range)<-levels(train$View_range)
 levels(test$upload_range)<-levels(train$upload_range)
 colnames(test)<-c("views_lifetime","life_uploads", "category","View_range","upload_range")
-
+##########################
+#Prediction on test data
+##########################
 model.rf.predict1<-predict(model.rf,newdata=test,type='response', predict.all=TRUE,  
                            norm.votes=TRUE)
 
