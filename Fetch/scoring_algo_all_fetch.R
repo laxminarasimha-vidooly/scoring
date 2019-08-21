@@ -27,29 +27,7 @@ library(rvest)
 ##################
 #Keychecker#######
 ##################
-keys=c("AIzaSyAAbyrs8ofXHbyVDZV-u7DpH9c9IVAOok0",
-       "AIzaSyB2NcRfFR2NwggTtobJpEOnY9YoEM9byZM",
-       "AIzaSyDE_ihZTZB-3V29zzl9VqdEV945ZtaUMEQ",
-       "AIzaSyBOoIbMV06l1-Vn10acksO54OCE2gmrjNE",
-       "AIzaSyDw4U6z7GOqZLncFKUIaLj789ZxumPINkc",
-       "AIzaSyAHegHlR1UfY6R-imJr1faqDxGM0YL-sBY",
-       "AIzaSyBZvJhBF1MZn579tGdpta50HCl2CW374_U",
-       "AIzaSyDUxDpxv1crwr4h3ZF9f7MCEV4kbPBMOCY",
-       "AIzaSyDIuWfiFyyQ2TEihNVtnjqM39h7DoDPF3M",
-       "AIzaSyDGIUHpM-KvnD1Xpa7m60KhxoJpEA1Iejk",
-       "AIzaSyBedbS79J8txSToZqtelgaVyhY4mV9_7Bo",
-       "AIzaSyBHiE5t86GKVX-YuKrV-09flVtZ1R1s6mA",
-       "AIzaSyAV4W2ILFEl_4pkCZqAtjbK72I3Gp1m0Cc",
-       "AIzaSyDMHv0urqfb2mKOMaUS5WNEdb4Oy5ZEYj8",
-       "AIzaSyDQKbA4-SgwChoW7o-eWyPCNZ4YXG9RiI4",
-       "AIzaSyAJiPQIjjRkB3Q5WEAg6FgHZANastW9KKA",
-       "AIzaSyACrpudPvAJRNdj5ivQvG-J3RCikudfgpU",
-       "AIzaSyCy97QAOAgYVfZ9Ow-jA5NK7Htx3d4ccF0",
-       "AIzaSyD17YtJy2QvWPLYux58kGTvui88fmkqGdk",
-       "AIzaSyCk2wFTWETQ1S7seIi2EpLiBx1ca441np0",
-       "AIzaSyBhFtmV1-g9VjAYAiBqUjK345E9DDjS9GU",
-       "AIzaSyAKowKJtGAwfXB2jyyDVwPPEfb6h7pf38w",
-       "AIzaSyAsaTykyKSl5RJU-VblfzbWZV91xBsU3LY")
+keys=c("keys")
 
 keys2<-vector(mode="numeric", length=0)
 
